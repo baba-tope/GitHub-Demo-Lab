@@ -54,12 +54,20 @@ ssh -T git@github.com
 
 Add key to local machine key storage
 ```sh
+eval `ssh-agent`
 ssh-add /home/$USER/.ssh/PRIVATE_KEY
 ```
 
 ### GitHub CLI
+Install the CLI using this guide: https://github.com/cli/cli#installation
+For Linux users: https://github.com/cli/cli/blob/trunk/docs/install_linux.md
 
-
+Then login:
+```sh
+gh auth login
+gh repo clone baba-tope/GitHub-Demo-Lab
+cd GitHub-Demo-Lab
+```
 ## Commits
 To commit the code and write a message for context, use `git commit`
 
@@ -68,8 +76,33 @@ git commit
 ```
 
 ## Branches
+To list the branches:
+```sh
+git branch
+``` 
+
+To create a branch:
+```sh
+git branch branch-name
+```
+
+Switch to branch:
+```sh
+git checkout branch-name
+```
 
 ## Remotes
+When you create a branch in the local repo, you have to link it up with the main repo in GitHub
+On your local machine:
+```sh
+git branch dev
+git checkout dev
+cd GitHub-Demo-Lab
+touch dev-notes.md
+git add .
+git commit -m "creating a dev-notes file for the dev branch"
+git push -u origin dev
+```
 
 ## Stashing
 
