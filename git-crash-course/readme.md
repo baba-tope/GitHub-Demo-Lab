@@ -107,6 +107,12 @@ git push -u origin dev
 ## Stashing
 
 ## Merging
+To update the main repo, use `git merge` from the other branch
+
+```sh
+git merge main
+```
+
 
 ## Git Status
 Use the `git status` to view the tracked changes and what would be committed to the repo.
