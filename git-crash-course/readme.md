@@ -2,6 +2,7 @@
 We can indicate that the project is a Git repo by adding a `.git` folder
 The folder can be initialized using `git init`
 
+The following shows how to create a project in a temporary directory in a Workspace, create a readme file, and commit to the repo
 ```sh
 mkdir /workspaces/tmp/new-project
 cd /workspaces/tmp/new-project
@@ -24,12 +25,37 @@ cd /workspaces/tmp
 ```
 
 ### HTTPS
+To clone this repo, for example, use this:
+
 ```sh
 git clone https://github.com/baba-tope/GitHub-Demo-Lab.git
 ```
 
-### SSH
+Use Personal Access Token to authenticate if using a local machine
+https://www.github.com/settings/tokens
 
+
+### SSH
+To clone a private repo to your local machine, use the following
+```ssh
+git clone git@github.com:$USER_NAME/REPO_NAME.git
+cd REPO_NAME
+```
+
+SSH authentication requires keypair generated and added to the GitHub account
+```sh
+ssh-keygen -t rsa
+```
+
+Test the connection
+```sh
+ssh -T git@github.com
+```
+
+Add key to local machine key storage
+```sh
+ssh-add /home/$USER/.ssh/PRIVATE_KEY
+```
 
 ### GitHub CLI
 
