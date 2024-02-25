@@ -105,6 +105,14 @@ git push -u origin dev
 ```
 
 ## Stashing
+```sh
+git stash list
+git stash
+git stash save dev-codestash
+git stash apply
+git stash pop
+```
+
 
 ## Merging
 To update the main repo, use `git merge` from the other branch
